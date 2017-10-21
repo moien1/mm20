@@ -1,0 +1,12 @@
+
+
+library(RCurl)
+
+y <- read.csv("https://raw.githubusercontent.com/moien1/moein1/master/data/Sales_Transactions_Dataset_Weekly.csv")
+
+hist(y$W1, col="RED", main="HISTOGRAM OF DATASET", xlim=c(0,50), ylim=c(0,100) , xlab="WEEKS", ylab="PRODUCT")
+
+hist(y$W51, col="RED", main="HISTOGRAM OF DATASET", xlim=c(0,50), ylim=c(0,100) , xlab="WEEKS", ylab="PRODUCT")
+
+scatter.smooth(y$W1,y$W51, col="RED", main="SCATTERPLOT OF DATASET", xlab="WEEKS", ylab="PRODUCT")
+
